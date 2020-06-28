@@ -1,0 +1,76 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+h1 {
+  text-align: center;
+}
+
+.user-title {
+  text-align: center;
+}
+
+#recipe-official-wrapper {
+  width: 30rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  margin: 2em auto;
+  padding: 1em;
+
+  ul {
+    margin-bottom: 2em;
+    li {
+      margin: .3em 0;
+    }
+  }
+
+  .ingredient-header {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+  span {
+    font-weight: bold;
+  }
+}
+
+
+#recipe-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .recipe-title {
+    text-align: center;
+  }
+  span {
+    margin-bottom: 1em;
+  }
+
+  .recipe-container {
+    min-width: 35rem;
+    padding: 1em;
+    margin: .5em;
+    flex: 1;
+    border: 1px solid black;
+  }
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.user-container {
+  margin: .5em;
+  width: 20rem;
+  height: 20rem;
+  text-align: center;
+  border: 1px solid black;
+  .user_delete_button {
+    margin-top: 6em;
+  }
+  .view-recipe-link {
+    font-size: 120%;
+  }
+}

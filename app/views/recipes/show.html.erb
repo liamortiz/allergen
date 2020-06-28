@@ -1,0 +1,19 @@
+<div id = "recipe-official-wrapper">
+  <h2><%= @recipe.name %></h2>
+  <p class = "ingredient-header">Ingredients</p>
+  <ul>
+    <% @recipe.ingredients.each do |ing| %>
+      <li><%= ing.name %></li>
+    <% end %>
+  </ul>
+
+  <%# Add ingredients here %>
+  <%= form_for @recipe.ingredients.build do |f| %>
+    <%= f.hidden_field :recipe_id, :value => @recipe.id %>
+    <%= f.text_field :name %>
+    <%= f.submit "Add Ingredient" %>
+  <% end %>
+
+
+  <p>By: <span><%= @recipe.user.fullname %></span></p>
+</div>

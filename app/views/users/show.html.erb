@@ -1,0 +1,19 @@
+<h2 class = "user-title"><%= @user.fullname %> Recipes</h2>
+<%= link_to "Back", users_path, :class => "btn btn-primary"%>
+<div id = "recipe-wrapper">
+  <% @user.recipes.each do |recipe|%>
+    <div class = "recipe-container">
+      <h4 class = "recipe-title"><%= recipe.name %></h4>
+      <%# Loop through ingredients %>
+      <span class = "badge badge-secondary">Ingredients</span>
+      <ul>
+        <% recipe.ingredients.each do |ingredient| %>
+          <li><%= ingredient.name %></li>
+        <% end %>
+      </ul>
+      <%# Button to remove a recipe %>
+      <%= button_to "View Recipe", recipe_path(recipe), :method => :get, :class => "btn btn-warning"%>
+      <%= button_to "Delete Recipe", recipe_path(recipe), :method => :delete, :class => "btn btn-danger"%>
+    </div>
+  <% end %>
+</div>
